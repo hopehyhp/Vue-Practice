@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "username": "user01",
+    "email": "user01@example.com",
+    "name": "张三",
+    "age": 28,
+    "gender": "男",
+    "role": "管理员",
+    "status": "启用"
+  },
+  {
+    "id": 2,
+    "username": "user02",
+    "email": "user02@example.com",
+    "name": "李四",
+    "age": 24,
+    "gender": "男",
+    "role": "编辑",
+    "status": "禁用"
+  },
+  {
+    "id": 3,
+    "username": "user03",
+    "email": "user03@example.com",
+    "name": "王五",
+    "age": 30,
+    "gender": "女",
+    "role": "访客",
+    "status": "启用"
+  },
+  {
+    "id": 4,
+    "username": "user04",
+    "email": "user04@example.com",
+    "name": "赵六",
+    "age": 22,
+    "gender": "女",
+    "role": "管理员",
+    "status": "启用"
+  },
+  {
+    "id": 5,
+    "username": "user05",
+    "email": "user05@example.com",
+    "name": "孙七",
+    "age": 35,
+    "gender": "男",
+    "role": "开发者",
+    "status": "启用"
+  },
+  {
+    "id": 6,
+    "username": "user06",
+    "email": "user06@example.com",
+    "name": "周八",
+    "age": 29,
+    "gender": "女",
+    "role": "编辑",
+    "status": "禁用"
+  },
+  {
+    "id": 7,
+    "username": "user07",
+    "email": "user07@example.com",
+    "name": "吴九",
+    "age": 26,
+    "gender": "男",
+    "role": "访客",
+    "status": "启用"
+  },
+  {
+    "id": 8,
+    "username": "user08",
+    "email": "user08@example.com",
+    "name": "郑十",
+    "age": 31,
+    "gender": "女",
+    "role": "管理员",
+    "status": "启用"
+  },
+  {
+    "id": 9,
+    "username": "user09",
+    "email": "user09@example.com",
+    "name": "郭十一",
+    "age": 23,
+    "gender": "男",
+    "role": "开发者",
+    "status": "启用"
+  },
+  {
+    "id": 10,
+    "username": "user10",
+    "email": "user10@example.com",
+    "name": "陈十二",
+    "age": 27,
+    "gender": "女",
+    "role": "编辑",
+    "status": "禁用"
+  }
+]

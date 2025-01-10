@@ -1,0 +1,86 @@
+// 色彩系统
+$colors: (
+  // 主色调 - 蓝色系
+  primary: (
+    light: #e6f0ff,
+    regular: #1890ff,
+    dark: #1e50a2,
+  ),
+  
+  // 辅助色 - 中性色
+  neutral: (
+    50: #f6f8fa,
+    100: #f0f7ff,
+    200: #eef1f6,
+    300: #e8e8e8,
+    400: #d9d9d9,
+    500: #bfbfbf,
+    600: #8c8c8c,
+    700: #606266,
+    800: #2c3e50,
+  ),
+  
+  // 功能色
+  functional: (
+    success: #67c23a,
+    warning: #e6a23c,
+    danger: #f56c6c,
+    info: #909399,
+  ),
+);
+
+// 阴影
+$shadows: (
+  sm: 0 1px 4px rgba(0, 0, 0, 0.05),
+  md: 0 2px 12px rgba(100, 150, 255, 0.1),
+  lg: 0 4px 20px rgba(0, 0, 0, 0.1),
+);
+
+// 圆角
+$radius: (
+  sm: 2px,
+  md: 4px,
+  lg: 8px,
+  full: 50%,
+);
+
+// 间距
+$spacing: (
+  xs: 4px,
+  sm: 8px,
+  md: 12px,
+  lg: 16px,
+  xl: 20px,
+  xxl: 24px,
+);
+
+// 字体
+$font: (
+  size: (
+    xs: 12px,
+    sm: 14px,
+    md: 16px,
+    lg: 18px,
+    xl: 20px,
+  ),
+  weight: (
+    regular: 400,
+    medium: 500,
+    bold: 600,
+  ),
+);
+
+// 布局
+$layout: (
+  header-height: 60px,
+  menu-width: 200px,
+  footer-height: 50px,
+);
+
+// z-index管理
+$z-index: (
+  header: 1000,
+  menu: 900,
+  modal: 1100,
+  dropdown: 1050,
+);
