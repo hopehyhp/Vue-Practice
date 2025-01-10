@@ -10,33 +10,35 @@
 vue-practice/
 ├── README.md
 ├── package.json
-├── vue.config.js            # Vue CLI configuration file
-├── src/
-│   ├── main.js              # Entry file
-│   ├── router.js            # Router configuration
-│   ├── store.js             # Vuex state management
-│   ├── styles/              # Style files
-│   │   ├── global.scss      # Global styles
-│   │   ├── index.scss       # Entry styles
-│   │   ├── mixins.scss      # Style mixins
-│   │   └── variables.scss    # Style variables
-│   ├── views/               # View components
-│   │   ├── HomeContent.vue   # Home content
-│   │   ├── login/           # Login page
-│   │   │   └── index.vue
-│   │   ├── userInfo/        # User information page
-│   │   │   └── InfoShow.vue  # User information display component
-│   │   ├── test/            # Test page
-│   │   │   └── index.vue
-│   │   ├── table/           # Table page
-│   │   │   └── index.vue
-│   │   └── calendar/        # Calendar page
-│   │       └── index.vue
-│   └── resources/           # Resource files
-│       └── json/            # JSON data
-│           ├── calendarData.json  # Calendar data
-│           └── tableData.json     # Table data
-└── .eslintrc.js             # ESLint configuration file
+├── vue.config.js                   # Vue CLI configuration file
+├── src/        
+│   ├── main.js                     # Entry file
+│   ├── router.js                   # Router configuration
+│   ├── components/                 # Common boxed components
+│   │   └── element-ui-components/  # Boxed element-ui components
+│   ├── store.js                    # Vuex state management
+│   ├── styles/                     # Style files
+│   │   ├── global.scss                 # Global styles
+│   │   ├── index.scss                  # Entry styles
+│   │   ├── mixins.scss                 # Style mixins
+│   │   └── variables.scss              # Style variables
+│   ├── views/                      # View components
+│   │   ├── HomeContent.vue             # Home content
+│   │   ├── login/                      # Login page
+│   │   │   └── index.vue       
+│   │   ├── userInfo/                   # User information page
+│   │   │   └── InfoShow.vue
+│   │   ├── test/                       # Test page
+│   │   │   └── index.vue       
+│   │   ├── table/                      # Table page
+│   │   │   └── index.vue       
+│   │   └── calendar/                   # Calendar page
+│   │       └── index.vue       
+│   └── resources/                  # Resource files
+│       └── json/                       # JSON data
+│           ├── calendarData.json           # Calendar data
+│           └── tableData.json              # Table data
+└── .eslintrc.js                     # ESLint configuration file
 ```
 
 ## Project Setup
