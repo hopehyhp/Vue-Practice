@@ -3,7 +3,7 @@
     <div slot="header" class="card-header header-pd-20">
       <span class="titleClass">目标管理</span>
     </div>
-    <best-table :column-options="displayOptions"  :table-data="tableData"></best-table>
+    <best-table :column-options="displayOptions" :table-data="tableData"></best-table>
   </el-card>
 </template>
 
