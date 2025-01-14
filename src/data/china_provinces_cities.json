@@ -1,0 +1,82 @@
+[
+    {
+        "id": "WZ0KQ36Y0N4N",
+        "name": "丹东",
+        "country": "CN",
+        "path": "丹东,丹东,辽宁,中国",
+        "timezone": "Asia\/Shanghai",
+        "timezone_offset": "+08:00"
+    },
+    {
+        "id": "WWYMRT0VRMUG",
+        "name": "大连",
+        "country": "CN",
+        "path": "大连,大连,辽宁,中国",
+        "timezone": "Asia\/Shanghai",
+        "timezone_offset": "+08:00"
+    },
+    {
+        "id": "WZ2NM0P2XMU7",
+        "name": "抚顺",
+        "country": "CN",
+        "path": "抚顺,抚顺,辽宁,中国",
+        "timezone": "Asia\/Shanghai",
+        "timezone_offset": "+08:00"
+    },
+    {
+        "id": "WXMSKZT4B3TT",
+        "name": "朝阳",
+        "country": "CN",
+        "path": "朝阳,朝阳,辽宁,中国",
+        "timezone": "Asia\/Shanghai",
+        "timezone_offset": "+08:00"
+    },
+    {
+        "id": "WZ24BQQTFN10",
+        "name": "本溪",
+        "country": "CN",
+        "path": "本溪,本溪,辽宁,中国",
+        "timezone": "Asia\/Shanghai",
+        "timezone_offset": "+08:00"
+    },
+    {
+        "id": "WXRVB9QYXKY8",
+        "name": "沈阳",
+        "country": "CN",
+        "path": "沈阳,沈阳,辽宁,中国",
+        "timezone": "Asia\/Shanghai",
+        "timezone_offset": "+08:00"
+    },
+    {
+        "id": "WXQCCV8TM5T4",
+        "name": "盘锦",
+        "country": "CN",
+        "path": "盘锦,盘锦,辽宁,中国",
+        "timezone": "Asia\/Shanghai",
+        "timezone_offset": "+08:00"
+    },
+    {
+        "id": "WXNZM7TPVMMZ",
+        "name": "营口",
+        "country": "CN",
+        "path": "营口,营口,辽宁,中国",
+        "timezone": "Asia\/Shanghai",
+        "timezone_offset": "+08:00"
+    },
+    {
+        "id": "WXJZTSCEPN4J",
+        "name": "葫芦岛",
+        "country": "CN",
+        "path": "葫芦岛,葫芦岛,辽宁,中国",
+        "timezone": "Asia\/Shanghai",
+        "timezone_offset": "+08:00"
+    },
+    {
+        "id": "WXRDFBCXJJ8E",
+        "name": "辽阳",
+        "country": "CN",
+        "path": "辽阳,辽阳,辽宁,中国",
+        "timezone": "Asia\/Shanghai",
+        "timezone_offset": "+08:00"
+    }
+]
