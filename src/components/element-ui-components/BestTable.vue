@@ -20,18 +20,18 @@
       <el-divider style="margin: 12px 0"/>
       <!-- 表格区域 -->
       <div class="table-body">
-        <el-table 
+        <el-table
           ref="table"
-          :data="tableData" 
-          v-loading="loading" 
-          border 
+          :data="tableData"
+          v-loading="loading"
+          border
           stripe
           height="100%"
           :highlight-current-row="true"
           @current-change="getSelectionRows">
           <template v-for="column in columnOptions">
-            <el-table-column 
-              v-if="selectedValues.includes(column.key) && column.func" 
+            <el-table-column
+              v-if="selectedValues.includes(column.key) && column.func"
               :key="column.key"
               :prop="column.key"
               :label="column.label">
@@ -39,13 +39,13 @@
                 <span>{{ column.func(scope.row[column.key]) }}</span>
               </template>
             </el-table-column>
-            <el-table-column 
-              v-else-if="selectedValues.includes(column.key) && column.key !== 'action'" 
+            <el-table-column
+              v-else-if="selectedValues.includes(column.key) && column.key !== 'action'"
               :key="column.key"
               :prop="column.key"
               :label="column.label"/>
-            <el-table-column 
-              v-else-if="selectedValues.includes(column.key) && column.key === 'action'" 
+            <el-table-column
+              v-else-if="selectedValues.includes(column.key) && column.key === 'action'"
               :key="column.key"
               :prop="column.key"
               :label="column.label">
@@ -81,7 +81,8 @@ export default {
   },
   props: {
     columnOptions: Object,
-    tableData: Object
+    tableData: Object,
+    loading: Boolean
   },
   // 计算属性
   computed: {},
@@ -194,26 +195,26 @@ export default {
 /* 调整表格样式 */
 :deep(.el-table) {
   width: 100% !important;
-  
+
   td {
     padding: 8px 0;
   }
-  
+
   /* 修复表头样式 */
   th.is-leaf {
     border-bottom: 1px solid #EBEEF5;
   }
-  
+
   /* 表头悬停效果 */
   th:hover {
     background-color: #eef1f6 !important;
   }
-  
+
   /* 确保表格内容不会被压缩 */
   .el-table__body {
     width: 100% !important;
   }
-  
+
   /* 调整表格行高 */
   .el-table__row {
     height: 40px;

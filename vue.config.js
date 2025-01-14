@@ -4,4 +4,13 @@ module.exports = defineConfig({
   runtimeCompiler: true,
   transpileDependencies: false,
   productionSourceMap: false,
+  devServer: {
+    proxy: {
+      '/data': {
+        target: 'http://apis.juhe.cn/atmos/',
+        changeOrigin: true,
+        pathRewrite: { '^/data': '' },
+      },
+    },
+  },
 })

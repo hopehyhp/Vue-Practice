@@ -19,12 +19,17 @@ const router = new Router({
     {
       path: '/index',
       component: Index,
+      redirect: '/homepage',
       children: [
         { path: '/homepage', name: 'homepage', component: HomeContent },
         { path: '/table', name: 'table', component: Table },
         { path: '/calendar', name: 'calendar', component: Calendar },
         { path: '/test', name: 'test', component: Test },
-        // { path: '/foundlist', name: 'foundlist', component: FoundList }
+        {
+          path: '/weather',
+          name: 'weather',
+          component: () => import('./views/WeatherForecast.vue')
+        },
       ]
     },
     {
@@ -32,11 +37,7 @@ const router = new Router({
       name: 'LoginPage',
       component: () => import('./views/login/index.vue')
     },
-    {
-      path: '/infoshow',
-      name: 'InfoShow',
-      component: () => import('./views/userInfo/InfoShow.vue')
-    },
+
   ]
 })
 
