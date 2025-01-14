@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import chinaProvincesCities from '../data/china_provinces_cities.json';
+import chinaProvincesCities from '../resources/json/china_provinces_cities.json';
 import config from '../config'; // 引入配置文件
 import BestTable from '../components/element-ui-components/BestTable.vue'; // 引入 BestTable 组件
 
