@@ -95,6 +95,7 @@ export default {
 <style lang="scss" scoped>
 @import '../styles/variables.scss';
 @import '../styles/mixins.scss';
+
 .weather-forecast {
   padding: 20px;
 }
@@ -120,6 +121,7 @@ export default {
   height: 50px;
   margin-right: 15px;
 }
+
 .title-row {
   margin-bottom: map-get($spacing, lg);
 
