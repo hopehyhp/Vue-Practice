@@ -2,7 +2,7 @@
 
 ## Project Introduction
 
-`vue-practice` is a practice project based on Vue.js, aimed at helping developers familiarize themselves with the basic usage and best practices of Vue.js. This project includes multiple example pages covering Vue Router, Vuex, component-based development, and more.
+`vue-practice` is a practice project based on Vue.js, aimed at helping developers familiarize themselves with the basic usage and best practices of Vue.js. This project includes multiple example pages covering Vue Router, Vuex, component-based development, and more. ahaha
 
 ## Project Structure
 
