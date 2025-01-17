@@ -14,7 +14,7 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      redirect: '/index'
+      redirect: '/login'
     },
     {
       path: '/index',
@@ -41,5 +41,25 @@ const router = new Router({
   ]
 })
 
+// 添加全局路由守卫
+router.beforeEach((to, from, next) => {
+  const token = localStorage.getItem('token')
+  
+  // 如果访问的是登录页，直接放行
+  if (to.path === '/login') {
+    next()
+    return
+  }
+  
+  // 检查是否有token
+  if (!token) {
+    // 如果没有token，重定向到登录页
+    next('/login')
+    return
+  }
+  
+  // 有token，允许访问
+  next()
+})
 
 export default router;

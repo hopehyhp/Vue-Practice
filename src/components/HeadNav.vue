@@ -63,12 +63,9 @@ export default {
       this.$refs.infoShow.showDialog();
     },
     logout() {
-      // 清除token
-      localStorage.removeItem("eleToken");
-      this.$store.dispatch("clearCurrentState");
-
-      // 页面跳转
-      this.$router.push("/login");
+      localStorage.removeItem('token')
+      this.$router.push('/login')
+      this.$message.success('已退出登录')
     }
   }
 };
