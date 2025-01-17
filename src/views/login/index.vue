@@ -80,11 +80,13 @@ export default {
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           this.loading = true;
-          // TODO: 调用登录接口
+          // 模拟登录成功，存储token
           setTimeout(() => {
+            // 存储token
+            localStorage.setItem('token', 'user-token-' + Date.now())
             this.loading = false;
             this.$message.success('登录成功');
-            this.$router.push('/');
+            this.$router.push('/index');
           }, 1000);
         }
       });
