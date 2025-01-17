@@ -2,7 +2,7 @@
 
 ## Project Introduction
 
-`vue-practice` is a practice project based on Vue.js, aimed at helping developers familiarize themselves with the basic usage and best practices of Vue.js. This project includes multiple example pages covering Vue Router, Vuex, component-based development, and more.
+`vue-practice` is a practice project based on Vue.js, aimed at helping developers familiarize themselves with the basic usage and best practices of Vue.js. This project includes multiple example pages covering Vue Router, Vuex, component-based development, and weather forecast functionality.
 
 ## Project Structure
 
@@ -32,14 +32,27 @@ vue-practice/
 │   │   │   └── index.vue       
 │   │   ├── table/                      # Table page
 │   │   │   └── index.vue       
-│   │   └── calendar/                   # Calendar page
-│   │       └── index.vue       
+│   │   ├── calendar/                   # Calendar page
+│   │   │   └── index.vue       
+│   │   └── WeatherForecast.vue         # Weather forecast page
 │   └── resources/                  # Resource files
 │       └── json/                       # JSON data
 │           ├── calendarData.json           # Calendar data
-│           └── tableData.json              # Table data
+│           ├── tableData.json              # Table data
+│           └── locations.json              # Weather locations data
 └── .eslintrc.js                     # ESLint configuration file
 ```
+
+## Features
+
+- User authentication and authorization
+- Calendar management
+- Table data display
+- Weather forecast
+  - Real-time weather information
+  - Location-based weather data
+  - Current date and time display
+  - Weather data preloading
 
 ## Project Setup
 
