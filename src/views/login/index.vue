@@ -77,6 +77,7 @@ export default {
   },
   methods: {
     handleLogin() {
+      // todo: add real api
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           this.loading = true;
