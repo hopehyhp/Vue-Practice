@@ -105,11 +105,11 @@ export default {
   // 初始化-页面已经渲染完毕
   mounted() {
     // 监听窗口大小变化
-    window.addEventListener('resize', this.calculateTableHeight);
+    // window.addEventListener('resize', this.calculateTableHeight);
   },
   beforeDestroy() {
     // 移除事件监听
-    window.removeEventListener('resize', this.calculateTableHeight);
+    // window.removeEventListener('resize', this.calculateTableHeight);
   },
   // 方法
   methods: {
