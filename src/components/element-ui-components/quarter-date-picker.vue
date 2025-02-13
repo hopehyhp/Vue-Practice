@@ -8,7 +8,7 @@
     >
       <div class="quarter-panel">
         <div class="quarter-panel-header">
-          <i class="el-icon-arrow-left" @click="currentYear--"></i>
+          <i class="el-icon-arrow-left" @click="yearHandler()"></i>
           <span>{{ currentYear }} 年</span>
           <i class="el-icon-arrow-right" @click="currentYear++"></i>
         </div>
@@ -49,7 +49,7 @@ export default {
   },
   computed: {
     displayValue() {
-      return this.quarterOptions.find(item => item.value === this.value)?.label || '请选择季度';
+      return this.currentYear + '年 ' + this.quarterOptions.find(item => item.value === this.value)?.label;
     },
     quarterOptions() {
       return [
@@ -66,6 +66,9 @@ export default {
       this.$emit('change', {year: this.currentYear, quarter: value}); // 更新绑定的值
       this.visible = false; // 关闭弹出框
     },
+    yearHandler(plus) {
+      plus ? this.currentYear ++ : this.currentYear--;
+    }
   },
 };
 </script>
