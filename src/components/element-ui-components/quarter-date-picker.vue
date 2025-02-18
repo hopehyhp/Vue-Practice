@@ -42,7 +42,7 @@ export default {
   name: 'QuarterPicker',
   data() {
     return {
-      value: 91,
+      value: 1,
       visible: false,
       currentYear: new Date().getFullYear(),
     };
