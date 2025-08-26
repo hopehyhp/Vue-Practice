@@ -40,7 +40,8 @@ export default {
           children: [
             {path: "table", name: "表格"},
             {path: "calendar", name: "日历"},
-            {path: "test", name: "测试"}
+            {path: "test", name: "测试"},
+            {path: "newCheck", name: "调查"}
           ]
         },
         {
