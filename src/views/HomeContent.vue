@@ -45,63 +45,71 @@ export default {
 
 <style scoped>
 .home-content {
-  display: grid; /* 使用网格布局 */
-  grid-template-columns: 1fr; /* 个人说明模块占满一行 */
-  gap: 20px; /* 模块之间的间距 */
-  padding: 20px;
-  background-color: #f5f7fa; /* 背景颜色 */
-  border-radius: 8px; /* 圆角 */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(15, 23, 42, 0.06));
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+  transition: background var(--theme-transition), border-color var(--theme-transition);
 }
 
 .intro-module {
-  grid-column: span 2; /* 个人说明模块占满两列 */
-  padding: 20px;
-  background-color: #ffffff; /* 个人说明模块背景颜色 */
-  border-radius: 8px; /* 圆角 */
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* 模块阴影效果 */
+  grid-column: span 2;
+  padding: 24px;
+  background-color: var(--color-surface);
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.18);
+  color: var(--color-text);
+  transition: background-color var(--theme-transition), border-color var(--theme-transition), color var(--theme-transition);
 }
 
 .module {
   padding: 20px;
-  background-color: #ffffff; /* 模块背景颜色 */
-  border-radius: 8px; /* 圆角 */
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* 模块阴影效果 */
-  transition: transform 0.3s; /* 动画效果 */
-  display: flex; /* 使用flex布局 */
-  flex-direction: column; /* 垂直排列内容 */
+  background-color: var(--color-surface);
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+  transition: transform 0.3s, background-color var(--theme-transition), border-color var(--theme-transition), color var(--theme-transition);
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text);
 }
 
 .module:hover {
-  transform: translateY(-5px); /* 悬停时的提升效果 */
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);
 }
 
 h2 {
   margin-bottom: 10px;
-  color: #333; /* 标题颜色 */
-  font-size: 1.5em; /* 标题字体大小 */
-  font-weight: 600; /* 标题字体加粗 */
+  color: var(--color-heading);
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
 ul {
-  list-style-type: none; /* 去掉列表前的点 */
-  padding: 0; /* 去掉内边距 */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 li {
-  padding: 8px 0; /* 列表项的上下内边距 */
-  border-bottom: 1px solid #eaeaea; /* 列表项底部边框 */
-  color: #555; /* 列表项字体颜色 */
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+  color: var(--color-text-muted);
 }
 
 li:last-child {
-  border-bottom: none; /* 最后一个列表项去掉底部边框 */
+  border-bottom: none;
 }
 
-/* 新增样式以确保模块在小屏幕上也能良好显示 */
 @media (min-width: 600px) {
   .home-content {
-    grid-template-columns: repeat(2, 1fr); /* 每行两个模块 */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 </style>

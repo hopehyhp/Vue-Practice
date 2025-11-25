@@ -32,14 +32,15 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .index {
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background-color: #f6f8fa;
+  background-color: var(--color-bg);
+  transition: background-color var(--theme-transition), color var(--theme-transition);
 }
 
 .header-fixed {
@@ -72,6 +73,7 @@ export default {
   height: 100%;
   overflow: hidden;
   position: relative;
+  background-color: var(--color-bg);
 }
 
 .content-wrapper {
@@ -79,6 +81,7 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 0 8px 8px 8px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(15, 23, 42, 0.05));
 }
 
 .content-main {
@@ -91,12 +94,15 @@ export default {
 .content-main > :deep(*) {
   flex: 1;
   min-height: 0;
-  background-color: #ffffff;
-  border-radius: 4px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+  border-radius: 12px;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  transition: background-color var(--theme-transition), color var(--theme-transition), border-color var(--theme-transition), box-shadow var(--theme-transition);
 }
 
 .content-main :deep(.el-card) {

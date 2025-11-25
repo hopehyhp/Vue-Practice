@@ -1,49 +1,192 @@
 @import './variables.scss';
 @import './mixins.scss';
 
-// 重置样式
-html, body {
+:root {
+  --theme-transition: 0.25s ease;
+}
+
+body,
+html {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-// 全局滚动条样式
+body {
+  background-color: var(--color-bg, #f6f8fa);
+  color: var(--color-text, #1f2933);
+  transition: background-color var(--theme-transition), color var(--theme-transition);
+}
+
+body.theme-standard {
+  --color-bg: #f5f7ff;
+  --color-surface: #ffffff;
+  --color-heading: #0f172a;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+  --color-accent: #1890ff;
+  --color-menu-bg: #f5f5f5;
+  --color-menu-sub-bg: #fafafa;
+  --color-menu-text: #243b53;
+  --color-menu-active-bg: #ecf5ff;
+  --color-menu-active-text: #409eff;
+  --color-header-start: #e6f0ff;
+  --color-header-end: #ffffff;
+  --color-header-text: #1e50a2;
+  --color-avatar-ring: #ffffff;
+  --color-theme-btn-bg: rgba(30, 80, 162, 0.08);
+  --color-theme-btn-text: #1e50a2;
+  --color-hero-start: #2f80ed;
+  --color-hero-end: #56ccf2;
+  --color-panel-muted: #f8fafc;
+  --color-panel-strong: #eef2ff;
+}
+
+body.theme-dark {
+  --color-bg: #050816;
+  --color-surface: #0f172a;
+  --color-heading: #f8fafc;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-border: rgba(148, 163, 184, 0.35);
+  --color-accent: #3b82f6;
+  --color-menu-bg: #0f172a;
+  --color-menu-sub-bg: #111b2b;
+  --color-menu-text: #cbd5f5;
+  --color-menu-active-bg: rgba(59, 130, 246, 0.2);
+  --color-menu-active-text: #93c5fd;
+  --color-header-start: #0b1220;
+  --color-header-end: #1b2a44;
+  --color-header-text: #f8fafc;
+  --color-avatar-ring: #1d4ed8;
+  --color-theme-btn-bg: rgba(59, 130, 246, 0.18);
+  --color-theme-btn-text: #bfdbfe;
+  --color-hero-start: #1e3a8a;
+  --color-hero-end: #2563eb;
+  --color-panel-muted: rgba(255, 255, 255, 0.04);
+  --color-panel-strong: rgba(148, 163, 184, 0.15);
+}
+
+// 滚动条
 * {
   &::-webkit-scrollbar {
     @include scrollbar;
   }
 }
 
-// Element UI 组件全局样式覆盖
+// Element UI 全局覆盖
 .el-card {
-  border: none;
-  box-shadow: map-get($shadows, sm) !important;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08) !important;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  transition: background-color var(--theme-transition), color var(--theme-transition);
 }
 
 .el-button {
+  transition: background-color var(--theme-transition), color var(--theme-transition), border-color var(--theme-transition);
+
   &--primary {
-    background-color: map-get(map-get($colors, primary), regular);
-    border-color: map-get(map-get($colors, primary), regular);
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+
+  &--default {
+    background-color: var(--color-panel-muted);
+    color: var(--color-text);
+    border-color: var(--color-border);
+  }
+
+  &--success,
+  &--warning,
+  &--danger {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #fff;
+  }
+
+  &.is-plain {
+    background-color: transparent;
+    color: var(--color-text);
+    border-color: var(--color-border);
   }
 }
 
-// ... 其他全局样式 
+.el-dropdown-menu,
+.el-select-dropdown,
+.el-picker-panel {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.el-dropdown-menu__item:hover {
+  background-color: var(--color-menu-active-bg);
+  color: var(--color-menu-active-text);
+}
+
+.el-input__inner,
+.el-textarea__inner {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.el-tabs__item {
+  color: var(--color-text-muted);
+
+  &.is-active {
+    color: var(--color-accent);
+  }
+}
+
+.el-card__header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.el-input-number,
+.el-input-number .el-input__inner {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.el-input-number__increase,
+.el-input-number__decrease {
+  background-color: var(--color-panel-muted);
+  color: var(--color-text);
+  border-left: 1px solid var(--color-border);
+}
+
+.el-timeline-item__tail {
+  border-color: var(--color-border);
+}
+
+.el-timeline-item__wrapper {
+  color: var(--color-text);
+}
+
+.el-timeline-item__node {
+  background-color: var(--color-panel-strong);
+  border-color: transparent;
+}
 
 // 卡片头部通用样式
 .card-header {
   @include flex(row, space-between, center);
-  height: 32px;  // 统一高度
-  
+  height: 32px;
+
   .titleClass {
     font-size: map-get(map-get($font, size), md);
     font-weight: map-get(map-get($font, weight), medium);
-    color: map-get(map-get($colors, neutral), 800);
+    color: var(--color-heading);
   }
 }
 
 .header-pd-20 {
   padding: 0 20px;
-} 
+}

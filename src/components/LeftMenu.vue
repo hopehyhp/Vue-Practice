@@ -8,7 +8,7 @@
         </router-link>
       </el-menu-item>
       <template v-for="item in items">
-        <el-submenu :index="item.path">
+        <el-submenu :index="item.path" :key="item.path">
           <template #title>
             <i :class="'fa fa-margin ' + item.icon"></i>
             <span>{{ item.name }}</span>
@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  name: "leftmenu",
+  name: "LeftMenu",
   data() {
     return {
       items: [
@@ -49,6 +49,12 @@ export default {
           name: "天气信息",
           path: "info",
           children: [{path: "weather", name: "天气信息"}]
+        },
+        {
+          icon: "fa-gamepad",
+          name: "娱乐模块",
+          path: "fun",
+          children: [{path: "entertainment", name: "猜数字游戏"}]
         }
       ],
       activePath: ''
@@ -61,72 +67,72 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '../styles/variables.scss';
+
 .left-menu {
   width: 200px;
-  border-right: 1px solid #e6e6e6;
+  border-right: 1px solid var(--color-border);
+  background-color: var(--color-menu-bg);
+  height: 100%;
+  transition: background-color var(--theme-transition), border-color var(--theme-transition);
 }
 
 .menu {
-  background-color: #f5f5f5;
+  background-color: transparent;
+  border-right: none;
+  color: var(--color-menu-text);
 }
 
-/* 一级菜单样式 */
-.el-menu-item {
+::v-deep .el-menu-item,
+::v-deep .el-submenu__title {
   height: 50px;
   line-height: 50px;
   padding-left: 20px !important;
+  color: var(--color-menu-text);
+  transition: color var(--theme-transition), background-color var(--theme-transition);
 }
 
-/* 一级菜单标题样式 */
-.el-submenu__title {
-  padding-left: 20px !important;
-}
-
-/* 子菜单样式 */
-.el-submenu .el-menu-item {
+::v-deep .el-submenu .el-menu-item {
   height: 45px;
   line-height: 45px;
-  padding-left: 55px !important; /* 调整为相对于一级菜单多缩进一些 */
-  background-color: #fafafa;
+  padding-left: 55px !important;
+  background-color: var(--color-menu-sub-bg);
   font-size: 13px;
 }
 
-/* 子菜单hover效果 */
-.el-submenu .el-menu-item:hover {
-  background-color: #f0f0f0;
+::v-deep .el-submenu .el-menu-item:hover {
+  background-color: var(--color-menu-active-bg);
 }
 
-/* 调整子菜单前的小圆点位置 */
-.el-submenu .el-menu-item::before {
+::v-deep .el-submenu .el-menu-item::before {
   content: '';
   position: absolute;
-  left: 40px; /* 调整小圆点的位置，使其在一级菜单文字右侧 */
+  left: 40px;
   top: 50%;
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: #909399;
+  background-color: var(--color-text-muted);
   transform: translateY(-50%);
+  transition: background-color var(--theme-transition);
 }
 
-/* 激活状态的菜单项 */
-.el-menu-item.is-active,
-.el-submenu .el-menu-item.is-active {
-  background-color: #ecf5ff !important;
-  color: #409EFF !important;
+::v-deep .el-menu-item.is-active,
+::v-deep .el-submenu .el-menu-item.is-active {
+  background-color: var(--color-menu-active-bg) !important;
+  color: var(--color-menu-active-text) !important;
 }
 
-/* 图标样式 */
 .fa-margin {
   margin-right: 8px;
   width: 16px;
   text-align: center;
+  color: inherit;
 }
 
-/* 链接样式 */
-.el-menu-item a,
-.el-submenu .el-menu-item a {
+::v-deep .el-menu-item a,
+::v-deep .el-submenu .el-menu-item a {
   text-decoration: none;
   color: inherit;
   display: block;

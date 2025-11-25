@@ -27,6 +27,12 @@ const router = new Router({
                 {path: '/calendar', name: 'calendar', component: Calendar, meta: {title: 'Element UI - calendar'}},
                 {path: '/test', name: 'test', component: Test, meta: {title: 'Element UI - test'}},
                 {path: '/newCheck', name: 'newCheck', component: newCheck, meta: {title: 'Element UI - check'}},
+                {
+                    path: '/entertainment',
+                    name: 'entertainment',
+                    component: () => import('./views/entertainment/index.vue'),
+                    meta: {title: '娱乐模块 - 猜数字'}
+                },
             ]
         },
         {
