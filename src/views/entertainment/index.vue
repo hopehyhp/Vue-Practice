@@ -1,14 +1,5 @@
 <template>
   <div class="entertainment">
-    <!-- <header class="page-head">
-      <div>
-        <p class="title-label">娱乐模块</p>
-        <h1>轻松一下，来场小游戏</h1>
-        <p class="intro">我们会陆续上线更多有趣玩法，目前已开放的第一个子页面是「猜数字游戏」。</p>
-      </div>
-      <img alt="fun illustration" src="@/assets/logo.png" class="hero-img">
-    </header> -->
-
     <el-tabs v-model="activeTab" type="card" class="ent-tabs">
       <el-tab-pane label="猜数字游戏" name="guess">
         <GuessNumberGame/>
